@@ -1,0 +1,30 @@
+# 默认训练配置
+model:
+  num_classes: 8
+  k: 16
+  in_features: 4    # xyz(3) + intensity(1)
+
+train:
+  batch_size: 4
+  epochs: 100
+  lr: 0.01
+  optimizer: sgd           # sgd | adamw
+  weight_decay: 1.0e-4
+  momentum: 0.9
+  scheduler: cosine        # cosine | step
+  num_workers: 4
+  log_every_n_steps: 20
+  val_every_n_epochs: 1
+
+data:
+  dataset_root: ./data/dales
+  num_points: 4096
+  split: train             # train | val | test
+  augment: true
+
+paths:
+  log_dir: ./runs
+  ckpt_dir: ./checkpoints
+
+device: cuda
+seed: 42
