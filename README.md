@@ -46,7 +46,7 @@ W3D/
 ### 1. 安装依赖
 
 ```bash
-conda activate yolov8
+conda activate w3d
 pip install open3d scikit-learn plyfile tensorboard easydict
 # KPConv 用的 KNN 加速（可选但推荐）
 pip install torch-cluster -f https://data.pyg.org/whl/torch-2.8.0+cu128.html
@@ -92,7 +92,7 @@ python src/inference.py \
 
 ## 服务器部署
 
-服务器：RTX 5070 (12GB) / CUDA 12.8 / conda env `yolov8`
+服务器：RTX 5070 (12GB) / CUDA 12.8 / conda env `w3d`
 
 ```bash
 # 一键训练
